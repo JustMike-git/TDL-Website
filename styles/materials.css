@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #2C2C2EFF;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    padding: 10px;
+    background-color: aquamarine;
+    border: none;
+    color: black;
+    border-radius: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+}
+
+/* table */
+
+#mats{
+    display: flex;
+    justify-content: center;
+}
+
+.table-container {
+    max-width: 1800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.matstable {
+    margin-top: 150px;
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border: solid;
+    border-color: black;
+    border-width: 10px;
+}
+
+.matstable thead tr {
+    background-color: #444; /* Dark header background */
+    text-align: left;
+}
+
+.matstable th,
+.matstable td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+.matstable tbody tr {
+    transition: background 0.3s ease;
+}
+
+.matstable tbody tr:hover {
+    background: rgba(255, 255, 255, 0.1); /* Highlight row on hover */
+}
+
+.matstable tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.05); /* Alternating row color */
+}
+
+.matstable th {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.matstable td {
+    font-size: 13px;
+    color: #ccc; /* Slightly muted color for text */
+}
+
+/* hover */
+
+li:hover {
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+li:not(:hover)
+{
+    transition: 0.5s;
+}
+
+/* navbar */
+
+#logo{
+    width: 50px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: 50px;
+    background-color: transparent;
+}
+
+nav {
+    width: 100%;
+    height: 15vh;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+}
+
+ul {
+    display:flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(59, 59, 59, 0),
+        rgba(59, 59, 59, 0),
+        #2C2C2EFF 100%
+    ), url("../img/LS Panorama.jpg");    
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position-y: 80%;
+    /*background-image: linear-gradient(rgb(72, 101, 124)40%, #2C2C2EFF);*/
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: transparent;
+}
+
+li a {
+    background-color: transparent;
+    font-weight: 500;
+}
