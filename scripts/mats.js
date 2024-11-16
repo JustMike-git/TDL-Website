@@ -42,3 +42,7 @@ async function populateTournamentData() {
         console.error('Error fetching data:', error);
     }
 }
+
+window.onload = function() {
+    populateTournamentData();
+};
