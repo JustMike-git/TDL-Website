@@ -13,6 +13,9 @@ async function populateTournamentData() {
             // Clear any existing rows
             tableBody.innerHTML = '';
 
+            // Format numbers with commas
+            const formatter = new Intl.NumberFormat();
+
             // Iterate over the data (keys are player names)
             Object.keys(data).forEach(playerName => {
                 const player = data[playerName]; // Get the player object
@@ -25,12 +28,22 @@ async function populateTournamentData() {
                 row.appendChild(nameCell);
 
                 const metalCell = document.createElement('td');
-                metalCell.textContent = player.metal; // Player's metal amount
+                metalCell.textContent = formatter.format(player.metal); // Player's metal amount formatted
                 row.appendChild(metalCell);
 
                 const leadCell = document.createElement('td');
-                leadCell.textContent = player.lead; // Player's lead amount
+                leadCell.textContent = formatter.format(player.lead); // Player's lead amount formatted
                 row.appendChild(leadCell);
+
+                // Calculate total materials
+                const metal = parseFloat(player.metal) || 0;
+                const lead = parseFloat(player.lead) || 0;
+                const totalMaterials = (Math.min(metal, lead) / 50000) * 30000;
+
+                // Create a cell for the total materials
+                const totalMaterialsCell = document.createElement('td');
+                totalMaterialsCell.textContent = formatter.format(Math.round(totalMaterials)); // Total materials formatted and rounded
+                row.appendChild(totalMaterialsCell);
 
                 // Append the row to the table body
                 tableBody.appendChild(row);
