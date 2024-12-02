@@ -2,7 +2,7 @@
 async function populateTournamentData() {
     try {
         // Fetch data from the API
-        const response = await fetch('http://supplies-whether.gl.at.ply.gg:19194/api/discordbot/gettournaifno');
+        const response = await fetch('https://supplies-whether.gl.at.ply.gg:19194/api/discordbot/gettournaifno');
         const data = await response.json();
 
         // Check if data is valid
